@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<meta name="description" content="A free tool to check your current IP address. This is helpful if you have a dynamic IP address." />
+
+<meta name="keywords" content="checkip, check ip, find ip, ip address, ip, dynamic ip, ip information, isp" />
+    
+<title>Check and Map your Current IP address</title>
+<link href="style.css" media="screen" rel="Stylesheet" type="text/css" />
+<script  
+src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAt71S5sxQJLo4b8FnbuA_XRTT9ErdWNJpqGosUxZZmEIFcK6dSxQ7g955MFjhUhVAGC3uAF-YcIg87w" 
+type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function load() {
+    if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        var point = new GLatLng(3.0833, 101.65);
+        map.setCenter(point,11);
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function(){marker.openInfoWindowHtml("You or your ISP is located here");});
+        map.addOverlay(marker);
+        map.addControl(new GSmallMapControl());
+        map.addControl(new GMapTypeControl());
+        marker.openInfoWindowHtml("You or your ISP is located here");
+
+    }
+}
+//]]>
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42255492-2', 'checkip.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+<body onload="load()" onunload="GUnload()">
+<div>
+
+<div id="hd">
+<div id="branding">
+<a href="/"><span id="logo">CheckIP.org</span></a>
+
+</div>
+<hr />
+</div>
+
+
+
+<div id="bd">
+
+<div style="padding:5px">
+  
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3049840164005210";
+/* CI-Leaderboard */
+google_ad_slot = "6301770088";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+
+<div id="yourip">
+<h1>Your IP Address:  <span style="color: #5d9bD3;">175.142.152.229</span></h1>
+
+<h2>Find your current IP address and additional information including maps and location info.</h2>
+
+
+
+
+
+
+<div class="clear">
+<div class="description"><div class="indent">
+
+
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3049840164005210";
+/* CI-LargeRect */
+google_ad_slot = "6976299688";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
+
+
+<h3>IP Information:</h3>
+<p>
+<ul id="feature-list">
+<li>IP Address: <font color=green>175.142.152.229</font><sup>*</sup></br>
+<li>City: Petaling Jaya</br>
+<li>State: 14</br>
+<li>Country: Malaysia</br>
+<li>Latitude: 3.0833</br>
+<li>Longitude: 101.65</br>
+<li>ISP: </br>
+<li>Organization:  </br>
+</ul>
+
+
+</p>
+
+
+</div></div>
+<div class="screenshot">
+<div id="map" style="width: 380px; height: 340px; float: left; ">	</div>
+<br><br>
+
+<h3>Other Useful Tools</h3>
+<ul id="feature-list">
+<li><a href="http://www.canyouseeme.org">Open Port Check Tool</a></li>
+</ul>
+</div>
+<br />
+
+
+</div>
+
+</div>
+<div id="ft">
+<hr />
+
+
+
+<p>&copy; Copyright <span id="copyright">2015</span> 
+
+</div>
+</div>
+
+
+</body>
+</html>

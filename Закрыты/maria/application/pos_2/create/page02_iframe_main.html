@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+		/* perfect-scrollbar v0.6.7 */
+	.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		/* Table */
+		#outer_table {
+		    width: 100%;
+		    text-align: center;
+		    color: #434343;
+		    border-spacing: 1px;
+		    font-size: 13px;
+		}
+
+		#outer_table tr td {
+		    padding: 10px 0;
+		}
+
+		.main_line {
+		    background-color: #f5f9fc;
+		}
+
+		#inner_table {
+		    width: 100%;
+		}
+
+		#orange_header {
+		    color: #ff7d01;
+		    text-decoration: underline;
+		}
+
+		.total_price {
+		    text-align: right;
+		    border-bottom-style: double;
+		    border-bottom-width: 6px;
+		    border-top-style: solid;
+		    border-top-width: 2px;
+		    border-color: #999;
+		}
+
+		.hidden {
+		    display: none;
+		}
+
+		#show_all:hover, .expander:hover {
+		    cursor: pointer;
+		}
+		
+		/* Top center line of buttons */
+
+		#buttons_line {
+		    width: calc(100% - 60px);
+		    float: left;
+		    position: relative;
+		    font-size: 1.2em;
+		    color: #515e67;
+		    padding-top: 10px;
+		    padding-left: 20px;
+		}
+
+		.select_styled select {
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+		    width: 100%;
+		    border: 1px solid #ebebeb;
+		    border-radius: 5px;
+		    color: #515e67;
+		    background: transparent;
+		    padding-left: 5px;
+		    height: 30px;
+		    
+		}
+
+		.select_styled {
+		    display: block;
+		    float: left;
+		    height: auto;
+		    overflow: hidden;
+		    background: url(../img/new_arrow.png) no-repeat right white;
+		    font-size: 13px;
+		    
+		}
+		
+		/* Two orange buttons */
+
+		.orange_button {
+		    display: inline-block;
+		    color: white;
+		    background-color: #ff9740;
+		    text-align: center;
+		    padding: 0 10px;
+		    border-radius: 5px;
+		    padding-top: 8px;
+		    height: 22px;
+		    vertical-align: top;
+		    font-size: 14px;
+		}
+
+		.orange_button:hover {
+		    cursor: pointer;
+		}
+
+		#orange_search {
+		    margin-right: 10px;
+		}
+		
+		#orange_comments {
+		    margin-right: 10px;
+		}
+		
+		/* hide default arrow in IE */
+		.select_styled select::-ms-expand {
+		    display: none;
+		}
+
+		#doc_type {
+		    width: 120px;
+		    padding-bottom: 15px;
+		}
+
+		input {
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    border: 1px solid #ebebeb;
+		    border-radius: 5px;
+		    color: #515e67;
+		    margin-left: 20px;
+		    padding-left: 5px;
+		    height: 30px;
+		}
+
+		#trx_no {
+		    width: 80px;
+		    margin-right: 30px;
+		}
+
+		#date_from, #date_to {
+		    width: 130px;
+		    margin: 0 10px;
+		}
+		
+		/* Table */
+
+		#table_head {
+		    width: calc(100% - 40px);
+		  	<!--- float: left; --->
+		    margin-top: 10px;
+		    font-weight: bold;
+		    text-align: center;
+		    color: #434343;
+		    border-spacing: 1px;
+		    font-size: 13px;
+		}
+
+		#table_head tr{
+		    color: #434343;
+		    background-color: #f8f8f8;
+		}
+
+		#table_head tr td {
+		    padding top: 10px;
+		}
+
+		.hidden {
+		    display: none;
+		}
+
+		#show_all:hover, {
+		    cursor: pointer;
+		}
+		
+		.expander:hover {
+			cursor: pointer;
+		}
+		
+    </style>
+
+</head>
+
+<body>
+	
+	 <div id="buttons_line">
+        <div class="select_styled" id="doc_type">
+            <select>
+                <option value="option1">Doc Type</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        </div>
+		<div class="select_styled">
+	        <input type="text" id="trx_no" value="Trx No">
+	       		Date From
+	        <input type="date" id="date_from">
+	        	To
+	        <input type="date" id="date_to">
+		</div>
+        <div class="orange_button" id="orange_search">Search</div>
+        <div class="orange_button" id="orange_comments">Add Comments</div>
+    </div>
+	
+	<table id="table_head" width="100%" border="0">
+        <tr height="30px">
+            <td style="width:9%;" id="show_all" onclick="expand_all()">Show All</td>
+            <td style="width:9.3%;">Date</td>
+            <td style="width:9.3%;">Irx No</td>
+            <td style="width:20%;">Irx Type</td>
+            <td style="width:20.5%;">Doc Amt</td>
+            <td style="width:32%;">Comments</td>
+        </tr>
+    </table>
+
+    <div id="contentHolder">
+        <table id="outer_table" width="100%" border="0"> 
+            <tr class="main_line">
+                <td style="width:8%;" class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td style="width:8.5%;">18/10/2015</td>
+                <td style="width:8.5%;">HQ00052</td>
+                <td style="width:17.5%;">POS</td>
+                <td style="width:14%;">RM 480.00</td>
+                <td style="width:32%;"></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>RM 480.00</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>BBBBBBBBBBBBBBBb</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="main_line">
+                <td class="expander"><i class="icon ion-chevron-down"></i></td>
+                <td>18/10/2015</td>
+                <td>HQ00052</td>
+                <td>POS</td>
+                <td>AAAAAAAAAAAAAAAAAAAa</td>
+                <td></td>
+            </tr>
+            <tr class="expandable_line hidden">
+                <td colspan="6">
+                    <table id="inner_table">
+                        <tr id="orange_header">
+                            <td style="width: 9%;">No.</td>
+                            <td style="width: 18%;">Item Dose</td>
+                            <td style="width: 15%;">Type</td>
+                            <td style="width: 10%;">U. Price</td>
+                            <td style="width: 10%;">Qty</td>
+                            <td style="width: 10%;">Cottect Qty.</td>
+                            <td style="width: 10%;">Dist</td>
+                            <td style="width: 18%;">Total</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TBB05 - TCM Bust Advance P (1 hr)</td>
+                            <td>S</td>
+                            <td>RM 480.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>RM 480.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td class="total_price">RM 480.00</td>
+                            <td></td>
+                       </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        /* Add event listeners to all expanders */
+        var elements = document.getElementsByClassName("expander");
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener("click", function(){
+                expand_this(this);
+            });
+        }
+
+        /* Expands or collapses an element */
+        function expand_this(elem) {
+            var line = elem.parentElement.nextElementSibling;
+            line.classList.toggle("hidden");
+            if(line.classList.contains("hidden")) {
+                elem.innerHTML = '<i class="icon ion-chevron-down"></i>';
+            } else {
+                elem.innerHTML = '<i class="icon ion-chevron-up"></i>';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

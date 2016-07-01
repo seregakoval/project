@@ -1,0 +1,157 @@
+/* Main center iframe */
+
+#page08_table {
+    float: left;
+    padding: 0;
+    color: #47515a;
+    width: calc(100% - 40px); /* -right panel width and -left and right padding */
+    height: calc(100vh - 170px);
+}
+
+/* Top center line of buttons */
+
+#buttons_line {
+    width: calc(100% - 60px);
+    float: left;
+    position: relative;
+    font-size: 1.2em;
+    color: #515e67;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.select_styled select {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    color: #515e67;
+    background: transparent;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.select_styled {
+    display: block;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    background: url(../img/new_arrow.png) no-repeat right white;
+}
+
+/* hide default arrow in IE */
+.select_styled select::-ms-expand {
+    display: none;
+}
+
+#doc_type {
+    width: 120px;
+}
+
+input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    color: #515e67;
+    margin-left: 20px;
+    padding-left: 5px;
+    height: 30px;
+}
+
+/* Two orange buttons */
+
+.orange_button {
+    display: inline-block;
+    color: white;
+    background-color: #ff9740;
+    text-align: center;  
+    padding: 0 10px;
+    border-radius: 5px;
+    padding-top: 8px;
+    height: 22px;
+    vertical-align: top;
+}
+
+.orange_button:hover {
+    cursor: pointer;
+}
+
+#orange_submit {
+    margin-right: 10px;
+}
+
+/* Table */
+
+#table_head {
+    width: calc(100% - 40px);
+    float: left;
+    text-align: center;
+    color: #434343;
+    border-spacing: 1px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#table_body {
+    width: 100%;
+    text-align: center;
+    color: #434343;
+    border-spacing: 1px;
+}
+
+#table_head tr td {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+#table_body tr td {
+    background-color: #f5f9fc;
+    padding: 10px 0;
+}
+
+/* Custom Checkbox */
+
+input[type=checkbox].css-checkbox {
+    position:absolute; 
+    z-index:-1000; 
+    left:-1000px; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0; 
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:18px;
+    height:15px; 
+    display:inline-block;
+    line-height:15px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle; 
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+label.css-label {
+    background-image:url("../img/checkbox5.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

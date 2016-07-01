@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/ionicons.css">
+
+	<style>
+
+	@font-face {
+	    font-family: MyriadPro;
+	    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+	    src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+	}
+
+		.clear {
+		    clear: both;
+		}
+
+		body {
+		    width: 100%;
+		    font-family: MyriadPro;
+		    font-size: 11px;
+		    line-height: 130%;
+		    margin: 0;
+		    padding: 0;
+		    color: #515e67;
+		}
+
+		/* Header styles */
+
+		header {
+		    background: #434343;
+		    color: white;
+		    padding: 5px;
+		}
+
+		#top_left{
+		    padding: 7px 0;
+		    float: left;
+		    position: relative;
+		}
+
+		#home{
+		    background: #202224;
+		    width: 1.5em;
+		    height: 1.5em;
+		    border: 1px solid #ddddde;
+		    border-radius: 50%;
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    text-align: center;
+		    font-size: 1.4em;
+		}
+
+		#home i {
+		    display: inline-block;
+		    vertical-align: -30%;
+		}
+
+		#home:hover {
+		    cursor: pointer;
+		}
+
+		h1 {
+		    display: inline;
+		    padding-left: 2em;
+		    font-size: 1.4em;
+		    margin: 0;
+		}
+
+		#top_right {
+		    display:inline-block;
+		    position:relative;
+		    float: right;
+		    height: auto;
+		}
+
+		#top_right img {
+		    height: 30px;
+		    width: 30px;
+		}
+
+		#greeting{
+		    display:inline-block;
+		    float: left;
+		    margin: 6px 13px 0 0;
+		    padding: 3px 6px;
+		    color: black;
+		    background-color: white;
+		    border-radius: 5px;
+		}
+
+		/* Right-pointing arrow */
+
+		.arrow_box {
+			position: relative;
+			background: #ffffff;
+		}
+		.arrow_box:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-left-color: #ffffff;
+			border-width: 5px;
+			margin-top: -5px;
+		}
+
+		#top_right img {
+		    display: block;
+		    float: right;
+		    border-radius: 50%;
+		}
+
+		#top_right a {
+		    color: black;
+		    position:absolute;
+		    bottom:0;
+		    right:0;
+		    background-color: white;
+		    border-radius: 50%;
+		    text-align: center;
+		    width: 12px;
+		    height: 12px;
+		}
+
+		/* Top right openable menu */
+
+		#top_nav {
+		    position: fixed;
+		    z-index: 2;
+		    right: 10px;
+		    top: 55px;
+		    background-color: white;
+		    margin: 0;
+		    padding: 0;
+		    box-shadow: 2px 2px 1px #828282,
+		                -2px 2px 1px #828282,
+		                2px 2px 1px #828282;
+		}
+
+		#top_nav:after {
+		    bottom: 100%;
+			left: 80%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-bottom-color: #ffffff;
+			border-width: 8px;
+			margin-top: -8px;
+		}
+
+		#top_nav li {
+		    list-style: none;
+		    border-bottom: 2px solid #ededed;
+		}
+
+		#top_nav li a {
+		    display: inline-block;
+		    width: calc(100% - 20px);
+		    text-decoration: none;
+		    color: #47515a;
+		    padding: 10px;
+		    font-size: 1.2em;
+		}
+
+		#top_nav li a:hover {
+		    background-color: #ededed;
+		}
+
+		/* Move buttons down */
+
+		#main_wrapper {
+		    position: relative;
+		}
+
+		.buttons_wrapper {
+		    position: absolute;
+		    bottom: 10px;
+		    width: 90%;
+		    padding: 0 5%;
+		}
+
+		.hidden {
+		    display: none;
+		}
+
+		/* Top left list&calendar panel */
+
+		#calendar_panel {
+		    border-radius: 5px;
+		    margin: 10px;
+		}
+
+		.tab {
+		    text-align: center;
+		    padding: 5px 0;
+		    color: #3e474c;
+		    border: 1px solid white;
+		    border-top-left-radius: 5px;
+		    border-top-right-radius: 5px;
+		    border-bottom: none;
+		}
+
+		#list_tab {
+		    float: left;
+		    width: 43%;
+		}
+
+		#calendar_tab {
+		    float: right;
+		    width: 53%;
+		}
+
+		.selected_tab {
+		    background-color: white;
+		}
+
+		.tab:hover {
+		    cursor: pointer;
+		}
+
+		.hidden {
+		    display: none;
+		}
+
+		#calendar_content {
+		    padding-top: 10px;
+		    background-color: white;
+		    position: relative;
+		}
+
+		#list_content {
+		    height: 240px;
+		    background-color: white;
+		}
+
+		#calendar_content, #main_wrapper {
+		    height: 230px;
+		}
+
+		#calendar_iframe {
+		    height: 190px;
+		}
+
+		#calendar_table {
+		    text-align: center;
+		    margin: 0 auto;
+		    color: #3F464C;
+		    width: 100%;
+		    margin-bottom: 5px;
+		}
+
+		#calendar_table td:hover {
+		    cursor: pointer;
+		}
+
+		#prev_month, #current_month, #next_month {
+		    padding: 10px 0;
+		    font-size: 1.2em;
+		    display: inline-block;
+		    text-align: center;
+		}
+
+		#prev_month, #next_month {
+		    width: 24%;
+		}
+
+		#current_month {
+		    width: 49%;
+		    color: #3F464C;
+		}
+
+		.month_switcher {
+		    color: #FF9740;
+		}
+
+		.month_switcher:hover {
+		    cursor: pointer;
+		}
+
+		.selected_date{
+		    color: white;
+		    background-color: #FF9740;
+		    border-radius: 5px;
+		}
+
+		/* Week view */
+
+		.week_container {
+		    margin: 5px auto;
+		    font-size: 1.2em;
+		    color: #3F464C;
+		    background-color: #EBEBEB;
+		    text-align: center;
+		    padding: 5px 0;
+		    border-radius: 5px;
+		    width: 50%;
+		}
+
+		.week_container:hover {
+		    cursor: pointer;
+		}
+
+		/* Month view */
+
+		#month_view {
+		    padding: 0 10px;
+		}
+
+		.month_container {
+		    display: inline-block;
+		    margin: 5px auto;
+		    font-size: 1.2em;
+		    color: #3F464C;
+		    background-color: #EBEBEB;
+		    text-align: center;
+		    padding: 5px 0;
+		    border-radius: 5px;
+		    width: 32%;
+		}
+
+		.month_container:hover {
+		    cursor: pointer;
+		}
+
+		.selected_week, .selected_month {
+		    color: white;
+		    background-color: #ff9740;
+		}
+
+	</style>
+</head>
+
+<body>
+
+    <div id="main_wrapper">
+        <div id="prev_month" class="month_switcher" onclick="decrease_month()">
+            &lt;&lt;
+        </div>
+        <div id="current_month">
+        </div>
+        <div id="next_month" class="month_switcher" onclick="increase_month()">
+            &gt;&gt;
+        </div>
+
+        <table id="calendar_table">
+            <tr>
+                <td>SUN</td>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+                <td>THU</td>
+                <td>FRI</td>
+                <td>SAT</td>
+            </tr>
+            <tr>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+                <td class="date_place" style="width: 14%;" onclick="highlight_date(this)">0</td>
+            </tr>
+            <tr>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+            </tr>
+            <tr>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+            </tr>
+            <tr>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+            </tr>
+            <tr>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+            </tr>
+            <tr id="additional_line">
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+                <td class="date_place" onclick="highlight_date(this)">0</td>
+            </tr>
+        </table>
+
+        <div id="week_view" class="hidden">
+            <div class="week_container selected_week" onclick="switch_week(this)" id="week_one"></div>
+            <div class="week_container" onclick="switch_week(this)" id="week_two"></div>
+            <div class="week_container" onclick="switch_week(this)" id="week_three"></div>
+            <div class="week_container" onclick="switch_week(this)" id="week_four"></div>
+            <div class="week_container" onclick="switch_week(this)" id="week_five"></div>
+        </div>
+
+        <div id="month_view" class="hidden">
+            <div class="month_container selected_month" onclick="switch_month(this)">JAN</div>
+            <div class="month_container" onclick="switch_month(this)">FEB</div>
+            <div class="month_container" onclick="switch_month(this)">MAR</div>
+            <div class="month_container" onclick="switch_month(this)">APR</div>
+            <div class="month_container" onclick="switch_month(this)">MAY</div>
+            <div class="month_container" onclick="switch_month(this)">JUN</div>
+            <div class="month_container" onclick="switch_month(this)">JUL</div>
+            <div class="month_container" onclick="switch_month(this)">AUG</div>
+            <div class="month_container" onclick="switch_month(this)">SEP</div>
+            <div class="month_container" onclick="switch_month(this)">OCT</div>
+            <div class="month_container" onclick="switch_month(this)">NOV</div>
+            <div class="month_container" onclick="switch_month(this)">DEC</div>
+        </div>
+
+ <!--       <div class="buttons_wrapper">
+            <div class="orange_button" id="day_button" onclick="switch_view(this)">DAY</div>
+            <div class="orange_button" id="week_button" onclick="switch_view(this)">WEEK</div>
+            <div class="orange_button" id="month_button" onclick="switch_view(this)">MONTH</div>
+        </div> -->
+
+    </div>
+
+    <script>
+
+        var month = new Array();
+        month[0] = "January";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+        var date = new Date();
+        date.setDate(1); /* Start with the first day of the month */
+
+        var offset = 0; /* From which day the month starts */
+        var number_of_days = 0;  /* Number of days in a month */
+        var placeholders = document.getElementsByClassName("date_place");
+        var weeks = document.getElementsByClassName("week_container");
+
+        fillCaledar();
+
+        function decrease_month() {
+            date.setMonth(date.getMonth() - 1);
+            fillCaledar();
+        }
+
+        function increase_month() {
+            date.setMonth(date.getMonth() + 1);
+            fillCaledar();
+        }
+
+        function fillCaledar() {
+
+            /* Set current month at the head of the table */
+            document.getElementById("current_month").innerHTML = month[date.getMonth()] + ", " + date.getFullYear();
+
+            /* Get what day is the first day of the month */
+            offset = date.getDay();
+
+            /* Get number of days in the current month */
+            number_of_days = daysInMonth(date.getMonth(), date.getFullYear());
+
+            /* Show or hide additional sixth line */
+            document.getElementById("additional_line").style.visibility = "hidden";
+            if( (offset == 5 && number_of_days == 31) ||
+                (offset == 6 && number_of_days >= 30)) {
+                document.getElementById("additional_line").style.visibility = "visible";
+            }
+
+            /* Filling week view */
+
+            weeks[0].innerHTML = "1 - 7 " + month[date.getMonth()];
+            weeks[1].innerHTML = "8 - 14 " + month[date.getMonth()];
+            weeks[2].innerHTML = "15 - 21 " + month[date.getMonth()];
+            weeks[3].innerHTML = "22 - 28 " + month[date.getMonth()];
+            weeks[4].innerHTML = "29 - " + number_of_days + " " + month[date.getMonth()];
+
+            weeks[4].style.visibility = "visible";
+            if(number_of_days < 29) {
+                weeks[4].style.visibility = "hidden";
+            }
+
+            /* Color the first day of the month */
+            for (i = 0; i < placeholders.length; i++) {
+                // Remove the class 'selected_week' if it exists
+                placeholders[i].classList.remove('selected_date')
+            }
+            placeholders[offset].classList.add("selected_date");
+
+            /* Set days of the current month */
+            for(var i = offset; i < number_of_days + offset; i++) {
+                placeholders[i].innerHTML = i - offset + 1;
+            }
+
+            /* Go to the previous month - fill last days of previous month*/
+            var prev_month = new Date();
+            prev_month.setDate(1);
+            prev_month.setMonth(date.getMonth() - 1);
+
+            var prev_days = daysInMonth(prev_month.getMonth(), prev_month.getFullYear());
+
+            for(var i = 0; i < offset; i++) {
+                placeholders[i].innerHTML = prev_days - offset + i + 1;
+            }
+
+            /* Fill first days of the next month*/
+
+            for(var i = offset + number_of_days; i <= 42; i++) {
+                placeholders[i].innerHTML = i - number_of_days - offset + 1;
+            }
+
+        }
+
+        function daysInMonth(month, year) {
+            return new Date(year, month + 1, 0).getDate();
+        }
+    </script>
+    <script>
+        function switch_view(elem){
+
+            switch (elem.id) {
+                case "day_button":
+                    document.getElementById("calendar_table").classList.remove('hidden');
+                    document.getElementById("week_view").classList.add('hidden');
+                    document.getElementById("month_view").classList.add('hidden');
+                break;
+
+                case "week_button":
+                    document.getElementById("calendar_table").classList.add('hidden');
+                    document.getElementById("week_view").classList.remove('hidden');
+                    document.getElementById("month_view").classList.add('hidden');
+                break;
+
+                case "month_button":
+                    document.getElementById("calendar_table").classList.add('hidden');
+                    document.getElementById("week_view").classList.add('hidden');
+                    document.getElementById("month_view").classList.remove('hidden');
+                break;
+
+                default:
+                break;
+            }
+
+        }
+
+        function switch_week(elem) {
+            var a = document.getElementsByClassName('week_container');
+            // loop through all 'week_container' elements
+            for (i = 0; i < a.length; i++) {
+                // Remove the class 'selected_week' if it exists
+                a[i].classList.remove('selected_week')
+            }
+            // Add class 'selected_week' to the clicked element
+            elem.classList.add('selected_week');
+        }
+
+        function switch_month(elem) {
+            var a = document.getElementsByClassName('month_container');
+            for (i = 0; i < a.length; i++) {
+                a[i].classList.remove('selected_month')
+            }
+            elem.classList.add('selected_month');
+        }
+
+        function highlight_date(elem) {
+            if(elem.classList.contains('selected_date')) {
+                elem.classList.remove('selected_date');
+            } else {
+                elem.classList.add('selected_date');
+            }
+        }
+    </script>
+</body>
+
+</html>

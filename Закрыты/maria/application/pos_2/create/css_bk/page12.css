@@ -1,0 +1,589 @@
+/* Page 12 specific layout */
+
+/* Next two rules fix shadow and arrow for top right menu */
+
+#top_nav {
+    box-shadow: 0px 0px 2px 2px rgba(130,130,130, 0.7);
+}
+
+#top_nav:after {
+    bottom: 100%;
+	left: 80%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #828282;
+	border-width: 8px;
+	margin-top: -8px;
+}
+
+.left_win {
+    width: 250px;
+    float: left;
+    background-color: #ebebeb;
+    height: calc(100vh - 40px); /* 100% viewport height - header */
+    border-right: 1px solid #e6e6e6;
+    color: #3e474c;
+}
+
+.right_win {
+    float: right;
+    width: calc(100% - 251px);
+    height: calc(100vh - 40px); /* 100% viewport height - header - green line */
+}
+
+/* Top left list&calendar panel */
+
+#calendar_panel {
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.tab {
+    text-align: center;
+    padding: 5px 0;
+    color: #3e474c;
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+
+#list_tab {
+    float: left;
+    width: 43%;
+}
+
+#calendar_tab {
+    float: right;
+    width: 53%;
+}
+
+.selected_tab {
+    background-color: white;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#calendar_content {
+    padding-top: 10px;
+    background-color: white;
+    position: relative;
+}
+
+#list_content {
+    height: 240px;
+    background-color: white;
+}
+
+#calendar_content, #main_wrapper {
+    height: 230px;
+}
+
+#calendar_iframe {
+    height: 190px;
+}
+
+#calendar_table {
+    text-align: center;
+    margin: 0 auto;
+    color: #3F464C;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#calendar_table td:hover {
+    cursor: pointer;
+}
+
+#prev_month, #current_month, #next_month {
+    padding: 10px 0;
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+}
+
+#prev_month, #next_month {
+    width: 24%;
+}
+
+#current_month {
+    width: 49%;
+    color: #3F464C;
+}
+
+.month_switcher {
+    color: #FF9740;
+}
+
+.month_switcher:hover {
+    cursor: pointer;
+}
+
+.selected_date{
+    color: white;
+    background-color: #FF9740;
+    border-radius: 5px;
+}
+
+/* Day, week, month buttons */
+
+.orange_button {
+    display: inline-block;
+    color: white;
+    background-color: #ff9740;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 32%;
+}
+
+.orange_button:hover {
+    cursor: pointer;
+}
+
+/* Move buttons down */
+
+#main_wrapper {
+    position: relative;
+}
+
+.buttons_wrapper {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    padding: 0 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Week view */
+
+.week_container {
+    margin: 5px auto;
+    font-size: 1.2em;
+    color: #3F464C;
+    background-color: #EBEBEB;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.week_container:hover {
+    cursor: pointer;
+}
+
+/* Month view */
+
+#month_view {
+    padding: 0 10px;
+}
+
+.month_container {
+    display: inline-block;
+    margin: 5px auto;
+    font-size: 1.2em;
+    color: #3F464C;
+    background-color: #EBEBEB;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    width: 32%;
+}
+
+.month_container:hover {
+    cursor: pointer;
+}
+
+.selected_week, .selected_month {
+    color: white;
+    background-color: #ff9740;
+}
+
+/* Search panel */
+
+.left_win h3 {
+    margin: 0 0 0 10px;
+}
+
+#search_panel {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: relative;
+    height: calc(100vh - 385px);
+    overflow: hidden;
+}
+
+#search_panel p, h4 {
+    margin: 5px 0;
+}
+
+#search_panel input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #CCCBD9;
+    color: #3e474c;
+    padding: 2px;
+}
+
+
+#minimum_price {
+    float: left;
+    width: 49%;
+}
+
+#maximum_price {
+    float: right;
+    width: 49%;
+}
+
+.bed_bath {
+    float: left;
+    width: 30%;
+    margin-right: 5px;
+}
+
+#button_wrapper {
+    text-align: center;
+}
+
+#refresh_button {
+    color: white;
+    background-color: #ff9740;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    padding: 5px 0;
+    font-size: 1.2em;
+}
+
+#refresh_button:hover {
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+:-moz-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+::-moz-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+:-ms-input-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+
+/* Custom checkbox */
+
+.checkbox_wrapper {
+    margin: 5px 0;
+}
+
+input[type=checkbox].css-checkbox {
+    position:absolute;
+    z-index:-1000;
+    left:-1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:18px;
+    height:13px;
+    display:inline-block;
+    line-height:13px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+ /*   vertical-align:middle; */
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -13px;
+}
+
+label.css-label {
+    background-image:url("../img/checkbox12.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Main window */
+
+/* Top line of buttons */
+
+#top_line {
+    width: 100%;
+    padding: 10px 0;
+}
+
+#appointment_button, #center_week_selector {
+    display: block;
+    color: white;
+    background-color: #ff9740;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 1.2em;
+    width: 120px;
+    margin-left: 10px;
+    height: 22px;
+}
+
+#appointment_button {
+    float: left;
+}
+
+#center_week_selector {
+    float: right;
+    width: 150px;
+    margin: 0;
+}
+
+#appointment_button:hover {
+    cursor: pointer;
+}
+
+/* Custom select */
+
+.styled-select select {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid #cccbd9;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #515e67;
+    background: transparent;
+    padding-left: 5px;
+    height: 30px;
+}
+
+.styled-select {
+    display: block;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    background: url(../img/new_arrow.png) no-repeat right white;
+    border-radius: 5px;
+}
+
+/* hide default arrow in IE */
+.styled-select select::-ms-expand {
+    display: none;
+}
+
+/* Specific styles for selects on the left panel */
+
+#search_panel select {
+    height: 25px;
+}
+
+#search_panel .styled-select {
+    width: 90%;
+}
+
+#location_select {
+    margin-left: 20px;
+    width: 120px;
+}
+
+#massage_select {
+    margin-left: 5px;
+    width: 150px;
+}
+
+#week_select {
+    margin-left: 20px;
+    width: 100px;
+    position: relative;
+}
+
+#week_select select {
+    padding-left: 25px;
+}
+
+#week_select i {
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    font-size: 20px;
+    color: #515e67;
+}
+
+#print_button, #next_week_button, #prev_week_button {
+    float: right;
+    border: 1px solid #cccbd9;
+    border-radius: 5px;
+    padding-top: 8px;
+    font-size: 1.2em;
+    height: 20px;
+    text-align: center;
+    width: 70px;
+    margin-right: 10px;
+    color: #515e67;
+}
+
+#print_button:hover, #next_week_button:hover, #prev_week_button:hover {
+    cursor: pointer;
+}
+
+#next_week_button {
+    width: 50px;
+    margin-right: 50px;
+    margin-left: 2px;
+}
+
+#prev_week_button {
+    width: 50px;
+    margin-right: 2px;
+}
+
+/* Second line of buttons */
+
+#second_line {
+    color: #515e67;
+    font-size: 1.4em;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+#second_line p {
+    margin: 0;
+}
+
+#second_line p {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+#second_line div {
+    display: inline-block;
+}
+
+.green_number, .orange_number {
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.green_number {
+    background-color: #76a500;
+}
+
+.orange_number {
+    background-color: #ff9740;
+}
+
+/* Appointments */
+
+.appointment {
+    margin-left: 10px;
+    float: left;
+    border: 1px solid #cccbd9;
+    border-radius: 5px;
+    width: 23%;
+    min-width: 240px;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 280px;
+}
+
+.appointment h3 {
+    font-size: 1.5em;
+}
+
+.appoint_time {
+    background-color: #ffe8d8;
+    border: 1px solid #ffe8d8;
+    border-radius: 5px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 5px 0;
+    color: #7a7a78;
+    margin-bottom: 5px;
+}
+
+.appoint_time i {
+    color: #896d3b;
+}
+
+.appoint_time span {
+    color: #d9544f;
+    font-size: 1.2em;
+}
+
+.appoint_time:hover {
+    cursor: pointer;
+}
+
+.appoint_green {
+    background-color: #d4eec9;
+    color: #3c763c;
+    border-color: #d4eec9;
+}
+
+.appoint_green i{
+    color: #3c763c;
+}
+
+.appoint_selected_red {
+    color: #d9544f;
+    border-color: #d9544f;
+}
+
+.appoint_selected_red i{
+    color: #d9544f;
+}
+
+.appoint_selected_green {
+    border-color: #3C763C;
+}
+
+.add_appointment {
+    border: 1px solid #cccbd9;
+    border-radius: 5px;
+    margin: 20px auto 10px auto;
+    padding: 5px 0;
+    width: 85%;
+    color: #cccbd9;
+}
+
+.add_appointment:hover {
+    cursor: pointer;
+}

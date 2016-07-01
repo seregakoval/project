@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+				@font-face {
+		    font-family: MyriadPro;
+		    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+		    src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+		}
+
+		.clear {
+		    clear: both;
+		}
+
+		body {
+		    width: 100%;
+		    font-family: MyriadPro;
+		    font-size: 11px;
+		    line-height: 130%;
+		    margin: 0;
+		    padding: 0;
+		    color: #515e67;
+		}
+
+		/* Header styles */
+
+		header {
+		    background: #434343;
+		    color: white;
+		    padding: 5px;
+		}
+
+		#top_left{
+		    padding: 7px 0;
+		    float: left;
+		    position: relative;
+		}
+
+		#home{
+		    background: #202224;
+		    width: 1.5em;
+		    height: 1.5em;
+		    border: 1px solid #ddddde;
+		    border-radius: 50%;
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    text-align: center;
+		    font-size: 1.4em;
+		}
+
+		#home i {
+		    display: inline-block;
+		    vertical-align: -30%;
+		}
+
+		#home:hover {
+		    cursor: pointer;
+		}
+
+		h1 {
+		    display: inline;
+		    padding-left: 2em;
+		    font-size: 1.4em;
+		    margin: 0;
+		}
+
+		#top_right {
+		    display:inline-block;
+		    position:relative;
+		    float: right;
+		    height: auto;
+		}
+
+		#top_right img {
+		    height: 30px;
+		    width: 30px;
+		}
+
+		#greeting{
+		    display:inline-block;
+		    float: left;
+		    margin: 6px 13px 0 0;
+		    padding: 3px 6px;
+		    color: black;
+		    background-color: white;
+		    border-radius: 5px;
+		}
+
+		/* Right-pointing arrow */
+
+		.arrow_box {
+			position: relative;
+			background: #ffffff;
+		}
+		.arrow_box:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-left-color: #ffffff;
+			border-width: 5px;
+			margin-top: -5px;
+		}
+
+		#top_right img {
+		    display: block;
+		    float: right;
+		    border-radius: 50%;
+		}
+
+		#top_right a {
+		    color: black;
+		    position:absolute;
+		    bottom:0;
+		    right:0;
+		    background-color: white;
+		    border-radius: 50%;
+		    text-align: center;
+		    width: 12px;
+		    height: 12px;
+		}
+
+		/* Top right openable menu */
+
+		#top_nav {
+		    position: fixed;
+		    z-index: 2;
+		    right: 10px;
+		    top: 55px;
+		    background-color: white;
+		    margin: 0;
+		    padding: 0;
+		    box-shadow: 2px 2px 1px #828282,
+		                -2px 2px 1px #828282,
+		                2px 2px 1px #828282;
+		}
+
+		#top_nav:after {
+		    bottom: 100%;
+			left: 80%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-bottom-color: #ffffff;
+			border-width: 8px;
+			margin-top: -8px;
+		}
+
+		#top_nav li {
+		    list-style: none;
+		    border-bottom: 2px solid #ededed;
+		}
+
+		#top_nav li a {
+		    display: inline-block;
+		    width: calc(100% - 20px);
+		    text-decoration: none;
+		    color: #47515a;
+		    padding: 10px;
+		    font-size: 1.2em;
+		}
+
+		#top_nav li a:hover {
+		    background-color: #ededed;
+		}
+
+		/* central table */
+
+		#main_table_wrapper {
+    		height: calc(100vh - 290px);
+		}
+
+		#central_table {
+		    width: 100%;
+		    font-size: 1em;
+		    text-align: center;
+		    color: #3e474c;
+		}
+
+		#central_table td {
+    		padding: 10px;
+		}
+
+		#table_header {
+		    width: 100%;
+		    font-size: 1em;
+		    text-align: center;
+		    color: #3e474c;
+		}
+
+		#table_header td {
+		    padding: 10px;
+		    background-color: #f8f8f8;
+		}
+
+    </style>
+</head>
+
+<body>
+    <div id="contentHolder">
+        <table id="central_table">
+            <tr>
+                <td width="5%">aa</td>
+                <td width="5%">fdfs</td>
+                <td width="10%">gf</td>
+                <td width="20%">gfg</td>
+                <td width="5%">gf</td>
+                <td width="5%">fg</td>
+                <td width="5%">f</td>
+                <td width="15%">324</td>
+                <td width="7%">fgh</td>
+                <td width="7%">144</td>
+                <td width="7%">12</td>
+                <td width="7%">2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >2222</td>
+            </tr>
+            <tr>
+                <td >aa</td>
+                <td >fdfs</td>
+                <td >gf</td>
+                <td >gfg</td>
+                <td >gf</td>
+                <td >fg</td>
+                <td >f</td>
+                <td >324</td>
+                <td >fgh</td>
+                <td >144</td>
+                <td >12</td>
+                <td >AAAA</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

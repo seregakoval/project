@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+		/* perfect-scrollbar v0.6.7 */
+		.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		/* Table body */
+
+		#table_body tr td {
+		    padding: 8px 0;
+		}
+
+		#second_table {
+		    width: 100%;
+		    text-align: left;
+		    color: #434343;
+		    border-spacing: 1px;
+		}
+
+		#second_table tr td {
+		    padding: 2px 0;
+		    font-size: 13px;
+		}
+
+		.date_cell {
+		    padding-left: 40px !important;
+		}
+
+		.price_cell {
+		    text-align: right;
+		    padding-right: 10px !important;
+		}
+    </style>
+
+</head>
+
+<body>
+   <div id="contentHolder">
+        <table id="second_table">
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">HQ00075</td>
+                <td width="15%">-</td>
+                <td width="5%" class="price_cell">RM 275.00</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+            <tr>
+                <td width="15%" class="date_cell">12/05/2015</td>
+                <td width="20%">Point Exchange</td>
+                <td width="15%">-</td>
+                <td width="15%">RCHQ00025</td>
+                <td width="5%" class="price_cell">RM 0.30</td>
+                <td width="30%"><i class="icon ion-printer"></i></td>
+            </tr>
+       </table>
+    </div>
+</body>
+
+</html>

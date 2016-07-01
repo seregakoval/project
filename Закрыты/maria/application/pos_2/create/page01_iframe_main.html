@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset="UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+		/* perfect-scrollbar v0.6.7 */
+		.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; padding: 50px 30px;}
+
+		@font-face {
+		    font-family: MyriadPro;
+		    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+		    src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+		}
+
+		.clear {
+		    clear: both;
+		}
+
+		body {
+		    width: 100%;
+		    font-family: MyriadPro;
+		    font-size: 11px;
+		    line-height: 130%;
+		    margin: 0;
+		    padding: 0;
+		    color: #515e67;
+		}
+
+		/* Center table */
+
+		#main_table_wrapper {
+		    float: left;
+		    padding: 50px 30px;
+		    color: #47515a;
+		    width: calc(100% - 40px - 60px); /* -right panel width and -left and right padding */
+		    height: calc(100vh - 40px - 30px - 100px);
+		}
+
+		hr {
+		    display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 1px solid #cfcfcf;
+		    margin: 10px 0;
+		    padding: 0;
+		}
+
+		.main_table {
+		    width: 100%;
+		    color: #47515a;
+		    font-size: 1.1em;
+		    line-height: 130%;
+		}
+
+		.main_table td{
+		    width: 20%;
+		}
+
+		.edit_button {
+		    display: inline-block;
+		}
+
+		.edit_button:hover {
+		    cursor: pointer;
+		}
+    </style>
+</head>
+
+<body>
+    <div id="contentHolder"> <!-- This wrapper is needed for custom scrollbar -->
+        <table class="main_table">
+            <tr>
+                <td colspan="4">CUSTOMER DETAILS&nbsp;&nbsp;<div class="edit_button"><i class="icon ion-edit"></i></div></td>
+            </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td>:&nbsp;Tan Mei Mei</td>
+                <td>Member Prefix</td>
+                <td>:&nbsp;INFNT</td>
+            </tr>
+            <tr>
+                <td>Customer No</td>
+                <td>:&nbsp;10869</td>
+                <td>Member Prefix</td>
+                <td>:&nbsp;HQ00001</td>
+            </tr>
+            <tr>
+                <td>Name on Card</td>
+                <td>:&nbsp;T26</td>
+                <td>Passport No</td>
+                <td>:&nbsp;G789056</td>
+            </tr>
+            <tr>
+                <td>IC No</td>
+                <td>:&nbsp;888888-88-8888</td>
+                <td>First Visit</td>
+                <td>:&nbsp;10/08/2013</td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td>:&nbsp;HQ</td>
+                <td>Last Visit</td>
+                <td>:&nbsp;14/08/2015</td>
+            </tr>
+            <tr>
+                <td>Principal Customer</td>
+                <td>:</td>
+                <td>Expiry Date</td>
+                <td>:&nbsp;13/12/2016</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <table class="main_table">
+            <tr>
+                <td colspan="4">CONTACT DETAILS</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td colspan="3">:&nbsp;11-8-2C, Apartment Villa, Jalan Vila 30/146</td>
+            </tr>
+            <tr>
+                <td>Post Code</td>
+                <td>:&nbsp;57000</td>
+                <td>City</td>
+                <td>:&nbsp;Kuala Lumpur</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>:&nbsp;Wilayah Persekutuan</td>
+                <td>Country</td>
+                <td>:&nbsp;Malaysia</td>
+            </tr>
+            <tr>
+                <td>Tel (Home)</td>
+                <td>:&nbsp;603-8888888</td>
+                <td>Tel (Office)</td>
+                <td>:&nbsp;603-1234567</td>
+            </tr>
+            <tr>
+                <td>Tel (Mobile)</td>
+                <td>:&nbsp;603-5678901</td>
+                <td>Email</td>
+                <td>:&nbsp;rbtirtha@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td colspan="3">:&nbsp;603-8888888</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <table class="main_table">
+            <tr>
+                <td colspan="4">CUSTOMER ANALYSIS</td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>:&nbsp;Female</td>
+                <td>Marital Status</td>
+                <td>:&nbsp;Married</td>
+            </tr>
+            <tr>
+                <td>Occupation</td>
+                <td colspan="3">:&nbsp;Marketing Manager</td>
+            </tr>
+            <tr>
+                <td>Race</td>
+                <td>:&nbsp;Chinese</td>
+                <td>Religion</td>
+                <td>:&nbsp;Buddha</td>
+            </tr>
+            <tr>
+                <td>Preferred Language</td>
+                <td>:&nbsp;English</td>
+                <td>Income Range</td>
+                <td>:&nbsp;RM5000-RM10000</td>
+            </tr>
+            <tr>
+                <td>Notes</td>
+                <td>:&nbsp;Sensitive to Activ7Gel</td>
+                <td>Contract Source</td>
+                <td>:&nbsp;Billboard</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

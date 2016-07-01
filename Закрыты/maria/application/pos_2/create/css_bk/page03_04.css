@@ -1,0 +1,120 @@
+/* Center area */
+
+#center_window {
+    width: calc(100% - 42px);
+    float: left;
+    margin-top: 20px;
+    padding: 0 1px;
+}
+
+.orange_button {
+    display: block;
+    float: right;
+    color: white;
+    background-color: #ff9740;
+    text-align: center;  
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.orange_button:hover {
+    cursor: pointer;
+}
+
+/* Two tabs */
+
+.tab {
+    float: left;
+    color: #434343;
+    font-size: 1.2em;
+    padding: 7px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 2px;
+    border: 2px solid #f8f8f8;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.selected_tab {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+#item_tab {
+    margin-left: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Table header - item collection */
+
+.table_head, #table_body {
+    width: 100%;
+    text-align: center;
+    color: #434343;
+    border-spacing: 1px;
+}
+
+.table_head {
+    font-weight: bold;
+}
+
+.table_head tr td {
+    background-color: #f8f8f8;
+    padding: 8px 0;
+}
+
+/* iframe */
+
+#page03_item_table, #page03_history_table {
+    width: 100%;
+    height: calc(100vh - 300px);
+}
+
+#page03_history_table {
+    height: calc(100vh - 200px);
+}
+
+/* Table body */
+
+#table_body tr td {
+    background-color: #f5f9fc;
+    padding: 8px 0;
+}
+
+#table_body tr td input {
+    border: none;
+    width: 40px;
+    color: #434343;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Delete button on collection history page */
+
+.delete_button {
+    border: 1px solid #dfe5e5;
+    border-radius: 5px;
+    background-color: white;
+    color: #e03627;
+    font-size: 1.3em;
+    width: 40px;
+    padding: 3px 0;
+    margin: 0 auto;
+}
+
+.delete_button:hover {
+    cursor: pointer;
+}
+
+.button_container {
+    padding: 0 !important;
+}

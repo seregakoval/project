@@ -1,0 +1,503 @@
+/* Page 11 specific layout */
+
+.left_win {
+    width: 160px;
+    float: left;
+    background-color: #ebebeb;
+    height: calc(100vh - 40px); /* 100% viewport height - header */
+    border-right: 1px solid #e6e6e6;
+    position: relative;
+}
+
+.right_win {
+    float: right;
+    width: 325px;
+    background-color: #ebebeb;
+    height: calc(100vh - 70px); /* 100% viewport height - header - green line */
+}
+
+/* Client picture & info */
+
+#client_picture {
+    display: block;
+    border: 2px solid #b2b1b7;
+    border-radius: 50%;
+    margin: 10px auto;
+    width: 35px;
+    height: 35px;
+}
+
+.left_win h3 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #3f464c;
+    margin: 10px 0;
+}
+
+.left_win table {
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.left_win table tr td:first-child {
+    padding-right: 30px;
+    color: #9a9fa2;
+}
+
+.left_win table tr td:last-child {
+    color: #3f464c;
+}
+
+/* Three central buttons */
+
+#top_button_wrapper {
+    margin-top: 30px;
+    font-size: 1.2em;
+    text-align: right;
+    color: #3e474e;
+}
+
+.outer {
+    padding-right: 10px;
+}
+
+.outer:hover {
+    cursor: pointer;
+    background-color: #cfcfcf;
+}
+
+#sales:hover + div div{
+    border-top-color: #EBEBEB;
+} 
+
+#payment:hover + div div{
+    border-top-color: #EBEBEB;
+} 
+
+#top_button_wrapper div div {
+    padding: 15px 10px 15px 0;
+    border-top: 1px solid #cfcfcf;
+}
+
+#submit div {
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.current_button {
+    color: white;
+    background-color: #77a600 !important;
+}
+
+.current_button div {
+    border-top: 1px solid #77a600 !important; 
+    border-bottom: none !important;
+}
+
+.current_button + div div {
+    border-top: none !important; 
+}
+
+/* Two bottom left buttons */
+
+#bottom_button_wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.button1 {
+    float: left;
+    text-align: center;
+    color: #515e67;
+    background-color: #d4d4d4;
+    padding: 5px 0;
+    border-top: 1px solid #c3c3c5;
+    border-right: 1px solid #c3c3c5;
+    width: calc(50% - 1px);
+    height: 35px;
+}
+
+.button1:hover {
+    cursor: pointer;
+    background-color: #FF9740;
+    border-top-color: #FF9740;
+    color: white;
+}
+
+#create_new_button {
+    border-right: none;
+    width: 50%;
+}
+
+.button1 i {
+    font-size: 2em;
+}
+
+.button1 p {
+    margin: 0;
+}
+
+/* Central window */
+
+.central_win {
+    position: relative;
+    float: left;
+    width: calc(100% - 486px);
+    height: calc(100vh - 70px);
+}
+
+#top_green_center {
+    width: calc(100% - 161px);
+    height: 30px;
+    background-color: #77a600;
+    float: left;
+    position: relative;
+}
+
+#top_input {
+    margin-top: 5px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 25px;
+    height: 20px;
+    width: 30%;
+}
+
+#top_green_center i {
+    position: absolute;
+    font-size: 2em;
+    left: 13px;
+    top: 15%;
+    color: darkgray;
+}
+
+/* Custom checkbox */
+
+input[type=checkbox].css-checkbox {
+    position:absolute; 
+    z-index:-1000; 
+    left:-1000px; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0; 
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:18px;
+    height:13px; 
+    display:inline-block;
+    line-height:13px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size: 1.3em;
+ /*   vertical-align:middle; */
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -13px;
+}
+
+label.css-label {
+    margin-left: 20px;
+    color: white;
+    background-image:url("../img/checkbox.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* central table */
+
+#main_table_wrapper {
+    height: calc(100vh - 290px);
+}
+
+#central_table {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    color: #3e474c;
+}
+
+#central_table td {
+    padding: 10px;
+}
+
+#table_header {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    color: #3e474c; 
+}
+
+#table_header td {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+/* Bottom panel */
+
+#bottom_panel {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+.inner_wrapper {
+    padding: 20px 20px 0 20px;
+    font-size: 1em;
+    color: #3e474c;
+}
+
+.orange_button {
+    display: inline-block;
+    color: white;
+    background-color: #ff9740;
+    text-align: center;  
+    padding: 5px 7px;
+    border-radius: 5px;
+    width: 30px;
+}
+
+.orange_button:hover {
+    cursor: pointer;
+}
+
+#trash_button {
+    float: right;
+    width: 20px;
+}
+
+.inner_wrapper input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #cccbd9;
+    font-size: 1em;
+    width: 100px;
+}
+
+.personnel {
+    margin-top: 20px;
+}
+
+.personnel .orange_button {
+    margin-right: 30px;
+    vertical-align: top;
+}
+
+.personnel input {
+    margin-right: 5px;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+:-moz-placeholder {
+   font-style: italic;
+    color: #cccbd9;
+}
+::-moz-placeholder {
+   font-style: italic;  
+    color: #cccbd9;
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+    color: #cccbd9;
+}
+
+/* Top right tabs */
+
+.tabs {
+    width: 324px;
+    height: 30px;
+    background-color: #76a500;
+    float: right;
+    position: relative;
+}
+
+.tab {
+    float: left;
+    background-color: #95be22;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    padding: 6px 0;
+    width: 31%;
+    margin-right: 2%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.tabs_wrapper {
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+}
+
+.selected_tab {
+    background-color: #ebebeb;
+    color: #222a2d;
+}
+
+/* Right window border */
+
+.content_wrapper {
+    border-left: 1px solid #d5d5d5;
+    height: 100%;
+    position: relative;
+}
+
+/* Switchable content in the right window */
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Top right search panel */
+
+.content_wrapper .top_right_search, #products_content, #services_content, #packages_content{
+    padding: 10px 5px;
+    width: calc(100% - 10px); 
+}
+
+#products_content, #services_content, #packages_content {
+    position: absolute;
+    top: 45px;
+    background-color: #F8F8F8;
+}
+
+.top_right_search input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #cccbd9;
+}
+
+.top_right_search .orange_button {
+    padding: 5px 0;
+    vertical-align: top;
+    font-size: 1.2em;
+}
+
+#code_field {
+    width: 25%;
+}
+
+#desc_field {
+    width: 40%;
+}
+
+#search_button {
+    width: 14%;   
+}
+
+#menu_button {
+    width: 18%;
+}
+
+/* Packages list */
+
+.one_product {
+    margin-bottom: 15px;
+}
+
+.one_product img, h4 {
+    display: inline-block;
+    color: #3e474c;
+    margin-bottom: 5px;
+}
+
+.one_product img {
+    width: 18px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.one_product h4 {
+    margin: 0;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.line_wrapper {
+    margin: 5px 10px 5px 0;
+}
+
+.quantity {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    vertical-align: top;
+    padding: 3px 0px;
+    background-color: #b8b8b8;
+    border-radius: 5px;
+    color: white;
+    visibility: hidden;
+}
+
+.another_wrapper {
+    display: inline-block;
+    width: calc(100% - 25px);
+}
+
+.line_wrapper p {
+    color: #3e474c;
+    display: inline-block;
+    margin: 0;
+    font-size: 1em;
+    padding-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.products_width p {
+    width: 130px;
+}
+
+.packages_width p {
+    width: 200px;
+}
+
+.services_width p {
+    width: 200px;
+}
+
+.grey_button {
+    display: inline-block;
+    min-width: 60px;
+    float: right;
+    background-color: #b8b8b8;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.grey_button:hover {
+    cursor: pointer;
+}

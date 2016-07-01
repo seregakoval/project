@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/ionicons.css">
+
+    <!-- The next three files allows horizontal scrolling in the right tabs of items with long names -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+
+    <!-- The next file is for the custom scrollbar for iframe -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+        /* Necessary styles for the horizontal scrolling of products name */
+        .scrollable .mCSB_dragger_bar {
+            display: none;
+        }
+
+		@font-face {
+    font-family: MyriadPro;
+    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+    src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    width: 100%;
+    font-family: MyriadPro;
+    font-size: 11px;
+    line-height: 130%;
+    margin: 0;
+    padding: 0;
+    color: #515e67;
+}
+
+/* Header styles */
+
+header {
+    background: #434343;
+    color: white;
+    padding: 5px;
+}
+
+#top_left{
+    padding: 7px 0;
+    float: left;
+    position: relative;
+}
+
+#home{
+    background: #202224;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #ddddde;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#home i {
+    display: inline-block;
+    vertical-align: -30%;
+}
+
+#home:hover {
+    cursor: pointer;
+}
+
+h1 {
+    display: inline;
+    padding-left: 2em;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+#top_right {
+    display:inline-block;
+    position:relative;
+    float: right;
+    height: auto;
+}
+
+#top_right img {
+    height: 30px;
+    width: 30px;
+}
+
+#greeting{
+    display:inline-block;
+    float: left;
+    margin: 6px 13px 0 0;
+    padding: 3px 6px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Right-pointing arrow */
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+}
+.arrow_box:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #ffffff;
+	border-width: 5px;
+	margin-top: -5px;
+}
+
+#top_right img {
+    display: block;
+    float: right;
+    border-radius: 50%;
+}
+
+#top_right a {
+    color: black;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    width: 12px;
+    height: 12px;
+}
+
+/* Top right openable menu */
+
+#top_nav {
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+    top: 55px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 1px #828282,
+                -2px 2px 1px #828282,
+                2px 2px 1px #828282;
+}
+
+#top_nav:after {
+    bottom: 100%;
+	left: 80%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #ffffff;
+	border-width: 8px;
+	margin-top: -8px;
+}
+
+#top_nav li {
+    list-style: none;
+    border-bottom: 2px solid #ededed;
+}
+
+#top_nav li a {
+    display: inline-block;
+    width: calc(100% - 20px);
+    text-decoration: none;
+    color: #47515a;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+#top_nav li a:hover {
+    background-color: #ededed;
+}
+
+
+/* Packages list */
+
+.one_product {
+    margin-bottom: 15px;
+}
+
+.one_product img, h4 {
+    display: inline-block;
+    color: #3e474c;
+    margin-bottom: 5px;
+}
+
+.one_product img {
+    width: 18px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.one_product h4 {
+    margin: 0;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.line_wrapper {
+    margin: 5px 10px 5px 0;
+}
+
+.quantity {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    vertical-align: top;
+    padding: 3px 0px;
+    background-color: #b8b8b8;
+    border-radius: 5px;
+    color: white;
+    visibility: hidden;
+}
+
+.another_wrapper {
+    display: inline-block;
+    width: calc(100% - 25px);
+}
+
+.line_wrapper p {
+    color: #3e474c;
+    display: inline-block;
+    margin: 0;
+    font-size: 1em;
+    padding-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.products_width p {
+    width: 130px;
+}
+
+.packages_width p {
+    width: 200px;
+}
+
+.services_width p {
+    width: 200px;
+}
+
+.grey_button {
+    display: inline-block;
+    min-width: 60px;
+    float: right;
+    background-color: #b8b8b8;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.grey_button:hover {
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="contentHolder">
+        <div class="one_product">
+            <h4><img src="img/gift_redempt.png">General - General</h4>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">Dep 3 - Deposit Packages</p>
+                    <div class="grey_button">RM 0.00</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="one_product">
+            <h4><img src="img/gift_redempt.png">Gift Redemption - Gift Redemption</h4>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="one_product">
+            <h4><img src="img/gift_redempt.png">Internal Promo - Internal Promo</h4>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">TEMPBT(A)181115 - Christmas Internal Promo</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="one_product">
+            <h4><img src="img/gift_redempt.png">Gift Redemption - Gift Redemption</h4>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="one_product">
+            <h4><img src="img/gift_redempt.png">Gift Redemption - Gift Redemption</h4>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">Calculated</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Products</p>
+                    <div class="grey_button">RM 1.50</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="line_wrapper packages_width">
+                <div class="quantity">123</div>
+                <div class="another_wrapper">
+                    <p class="scrollable" data-mcs-theme="minimal-dark">RD1502 - 1500 Points - Treatments</p>
+                    <div class="grey_button">RM 0.80</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".scrollable").mCustomScrollbar({
+            axis: "x" // horizontal scrollbar
+        });
+
+        /* Following lines of code are for showing and hiding quantity */
+
+        var wrappers = document.getElementsByClassName("another_wrapper");
+        for(var i = 0; i < wrappers.length; i++) {
+
+            wrappers[i].addEventListener("mouseenter", function(){
+                show(this);
+            });
+            wrappers[i].addEventListener("mouseleave", function(){
+                hide(this);
+            });
+
+        }
+
+        function show(elem) {
+
+            var previousSibling = elem.previousSibling;
+            /* Check for line breaks and whitespaces */
+            while(previousSibling && previousSibling.nodeType != 1) {
+                previousSibling = previousSibling.previousSibling;
+            }
+            previousSibling.style.visibility = "visible";
+        }
+
+        function hide(elem) {
+
+            var previousSibling = elem.previousSibling;
+            /* Check for line breaks and whitespaces */
+            while(previousSibling && previousSibling.nodeType != 1) {
+                previousSibling = previousSibling.previousSibling;
+            }
+            previousSibling.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>

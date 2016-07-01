@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		/* perfect-scrollbar v0.6.7 */
+		.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+		/* Table */
+
+		#table_body {
+		    width: 100%;
+		    text-align: center;
+		    color: #434343;
+		    border-spacing: 1px;
+		}
+
+		#table_body tr td {
+		    background-color: #f5f9fc;
+		    padding: 10px 0;
+		    font-size: 13px;
+		}
+
+		/* Custom Checkbox */
+
+		input[type=checkbox].css-checkbox {
+		    position:absolute;
+		    z-index:-1000;
+		    left:-1000px;
+		    overflow: hidden;
+		    clip: rect(0 0 0 0);
+		    height:1px;
+		    width:1px;
+		    margin:-1px;
+		    padding:0;
+		    border:0;
+		}
+
+		input[type=checkbox].css-checkbox + label.css-label {
+		    padding-left:18px;
+		    height:15px;
+		    display:inline-block;
+		    line-height:15px;
+		    background-repeat:no-repeat;
+		    background-position: 0 0;
+		    vertical-align:middle;
+		    cursor:pointer;
+		}
+
+		input[type=checkbox].css-checkbox:checked + label.css-label {
+		    background-position: 0 -15px;
+		}
+
+		label.css-label {
+		    background-image:url("../img/checkbox5.png");
+		    -webkit-touch-callout: none;
+		    -webkit-user-select: none;
+		    -khtml-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		}
+		
+		/* Two orange buttons */
+
+		.orange_button {
+		    display: inline-block;
+		    color: white;
+		    background-color: #ff9740;
+		    text-align: center;
+		    padding: 0 10px;
+		    border-radius: 5px;
+		    padding-top: 8px;
+		    height: 22px;
+		    vertical-align: top;
+		}
+
+		.orange_button:hover {
+		    cursor: pointer;
+		}
+
+		#orange_submit {
+		    margin-right: 10px;
+		}
+		
+		
+		/* Table */
+
+		#table_head {
+		    width: calc(100% - 40px);
+		    <!--- float: left; --->
+		    text-align: center;
+		    color: #434343;
+		    border-spacing: 1px;
+		    font-weight: bold;
+		    margin-top: 10px;
+		    font-size: 13px;
+		}
+
+
+		#table_head tr td {
+		    background-color: #f8f8f8;
+		    padding: 10px 0;
+		}
+		
+		
+    </style>
+</head>
+
+<body>
+	
+		<div id="buttons_line">
+            Service Date:
+            <input type="date" id="date_from" value="26/06/2014">
+            <div class="orange_button" id="orange_submit">Submit</div>
+        </div>
+		
+		<table id="table_head">
+            <tr>
+                <td style="width: 10%;"></td>
+                <td style="width: 10%;">Sales ID</td>
+                <td style="width: 10%;">Code</td>
+                <td style="width: 30%;">Item</td>
+                <td style="width: 10%;">U. Price</td>
+                <td style="width: 10%;">Total</td>
+                <td style="width: 10%;">Bal</td>
+                <td style="width: 10%;">Sales Date</td>
+            </tr>
+        </table>
+
+    <div id="contentHolder">
+        <table id="table_body">
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+            <tr>
+                <td width="10%">
+                    <input type="checkbox" class="css-checkbox">
+                    <label class="css-label"></label>
+                </td>
+                <td width="10%">HQ00002</td>
+                <td width="10%">TLBF02-M</td>
+                <td width="30%">Lorem Ipsum is simply dummy text of the</td>
+                <td width="10%">250</td>
+                <td width="10%">12</td>
+                <td width="10%">11</td>
+                <td width="10%">11-04-2014</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+        var checkboxes = document.getElementsByClassName("css-checkbox");
+        var labels = document.getElementsByClassName("css-label");
+
+        /* Add ids for all checkboxes and "for" for labels */
+
+        for(var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].setAttribute("id", "cb" + i);
+            labels[i].setAttribute("for", "cb" + i);
+        }
+
+        /* Add event listeners to all checkboxes */
+        for(var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener("change", function(){
+                highlight_line(this);
+            });
+        }
+
+        function highlight_line(elem) {
+            var line = elem.parentElement.parentElement.children;
+            if(elem.checked) {
+                for(var i = 0; i < line.length; i++) {
+                    line[i].style.backgroundColor = "white";
+                }
+            } else {
+                for(var i = 0; i < line.length; i++) {
+                    line[i].style.backgroundColor = "#f5f9fc";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

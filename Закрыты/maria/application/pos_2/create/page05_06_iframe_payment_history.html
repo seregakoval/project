@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+		/* perfect-scrollbar v0.6.7 */
+		.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		/* Table body */
+
+		#table_body tr td {
+		    background-color: #f5f9fc;
+		    padding: 8px 0;
+		    font-size: 12px;
+		}
+
+		#table_body tr td input {
+		    border: 1px solid #ebebeb;
+		    border-radius: 5px;
+		    width: 40px;
+		    color: #434343;
+		    text-align: right;
+		    padding-right: 10px;
+		    font-size: 1em;
+		}
+
+		#table_body tr td i {
+		    font-size: 1.2em;
+		    padding-left: 5px;
+		}
+
+		.date_input {
+		    width: 80px !important;
+		}
+
+		/* Delete button on collection history page */
+
+		.delete_button {
+		    border: 1px solid #dfe5e5;
+		    border-radius: 5px;
+		    background-color: white;
+		    color: #e03627;
+		    font-size: 1.3em;
+		    width: 40px;
+		    padding: 3px 0;
+		    margin: 0 auto;
+		}
+
+		.delete_button:hover {
+		    cursor: pointer;
+		}
+
+		.button_container {
+		    padding: 0 !important;
+		}
+    </style>
+</head>
+
+<body>
+   <div id="contentHolder">
+        <table id="table_body">
+            <tr>
+                <td width="9%"><i class="icon ion-printer"></i></td>
+                <td width="29%">RCMV0012364</td>
+                <td width="14%">MV002562</td>
+                <td width="14%">03/05/2015</td>
+                <td width="14%">Test Customer</td>
+                <td width="14%">0.00</td>
+                <td width="14%" class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+            <tr>
+                <td><i class="icon ion-printer"></i></td>
+                <td>RCMV0012364</td>
+                <td>MV002562</td>
+                <td>03/05/2015</td>
+                <td>Test Customer</td>
+                <td>0.00</td>
+                <td class="button_container"><div class="delete_button"><i class="icon ion-trash-a"></i></div></td>
+            </tr>
+       </table>
+    </div>
+</body>
+
+</html>

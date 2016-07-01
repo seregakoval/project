@@ -1,0 +1,22 @@
+<?php get_header(); ?>
+
+<div class="container-wrap">
+	
+	<div class="container main-content">
+		
+		<div class="row">
+			
+			<div class="col span_12">
+				
+				<div id="error-404">
+					<img class="aligncenter size-full wp-image-755" src="http://www.piligrimporto.ru/wp-content/uploads/2014/07/404_PilPor.jpg" alt="404_PilPor" width="638" height="566" />
+				</div>
+				
+			</div><!--/span_12-->
+			
+		</div><!--/row-->
+		
+	</div><!--/container-->
+
+</div>
+<?php get_footer(); ?>

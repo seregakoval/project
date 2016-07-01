@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/ionicons.css">
+    <!-- The next file is for the custom scrollbar -->
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+		/* perfect-scrollbar v0.6.7 */
+		.ps-container{-ms-touch-action:none;overflow:hidden !important}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container.ps-in-scrolling{pointer-events:none}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-webkit-transition:background-color 0.2s linear,opacity 0.2s linear;-moz-transition:background-color 0.2s linear,opacity 0.2s linear;-o-transition:background-color 0.2s linear,opacity 0.2s linear;transition:background-color 0.2s linear,opacity 0.2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color 0.2s linear;-moz-transition:background-color 0.2s linear;-o-transition:background-color 0.2s linear;transition:background-color 0.2s linear;right:0;width:8px}.ps-container:hover.ps-in-scrolling{pointer-events:none}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
+
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		/* Tables*/
+
+		.table_head, #table_body {
+		    width: 100%;
+		    text-align: center;
+		    color: #434343;
+		    border-spacing: 1px;
+		}
+
+		#table_body tr td {
+		    padding: 8px 0;
+		    font-size: 14px;
+		}
+
+		.total_points {
+		    text-align: right !important;
+		}
+
+		.bordered {
+		    border-top: 1px solid #434343;
+		    border-bottom: 1px solid #434343;
+		}
+    </style>
+
+</head>
+
+<body>
+   <div id="contentHolder">
+        <table id="table_body">
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td width="10%">Testing A</td>
+                <td width="5%">NM</td>
+                <td width="10%">16/07/2015</td>
+                <td width="10%">HEADQUARTERS</td>
+                <td width="25%">HQ00117:RCHQ000113</td>
+                <td width="8%">50</td>
+                <td width="8%">0</td>
+                <td width="8%">50</td>
+                <td width="8%">500</td>
+                <td width="8%">500</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td class="total_points bordered">TOTAL:</td>
+                <td class="bordered">V</td>
+                <td class="bordered">0</td>
+                <td class="bordered">50</td>
+                <td class="bordered">500</td>
+                <td class="bordered">500</td>
+            </tr>
+       </table>
+    </div>
+</body>
+
+</html>

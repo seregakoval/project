@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/ionicons.css">
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
+    <style>
+        /* Necessary styles for the custom scrollbar to work */
+        #contentHolder { position: relative; height: 100vh; }
+
+		@font-face {
+		    font-family: MyriadPro;
+		    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+		    src: url("../fonts/MyriadPro-Regular.woff") format("woff");
+		}
+
+		.clear {
+		    clear: both;
+		}
+
+		body {
+		    width: 100%;
+		    font-family: MyriadPro;
+		    font-size: 11px;
+		    line-height: 130%;
+		    margin: 0;
+		    padding: 0;
+		    color: #515e67;
+		}
+
+		/* Header styles */
+
+		header {
+		    background: #434343;
+		    color: white;
+		    padding: 5px;
+		}
+
+		#top_left{
+		    padding: 7px 0;
+		    float: left;
+		    position: relative;
+		}
+
+		#home{
+		    background: #202224;
+		    width: 1.5em;
+		    height: 1.5em;
+		    border: 1px solid #ddddde;
+		    border-radius: 50%;
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    text-align: center;
+		    font-size: 1.4em;
+		}
+
+		#home i {
+		    display: inline-block;
+		    vertical-align: -30%;
+		}
+
+		#home:hover {
+		    cursor: pointer;
+		}
+
+		h1 {
+		    display: inline;
+		    padding-left: 2em;
+		    font-size: 1.4em;
+		    margin: 0;
+		}
+
+		#top_right {
+		    display:inline-block;
+		    position:relative;
+		    float: right;
+		    height: auto;
+		}
+
+		#top_right img {
+		    height: 30px;
+		    width: 30px;
+		}
+
+		#greeting{
+		    display:inline-block;
+		    float: left;
+		    margin: 6px 13px 0 0;
+		    padding: 3px 6px;
+		    color: black;
+		    background-color: white;
+		    border-radius: 5px;
+		}
+
+		/* Right-pointing arrow */
+
+		.arrow_box {
+			position: relative;
+			background: #ffffff;
+		}
+		.arrow_box:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-left-color: #ffffff;
+			border-width: 5px;
+			margin-top: -5px;
+		}
+
+		#top_right img {
+		    display: block;
+		    float: right;
+		    border-radius: 50%;
+		}
+
+		#top_right a {
+		    color: black;
+		    position:absolute;
+		    bottom:0;
+		    right:0;
+		    background-color: white;
+		    border-radius: 50%;
+		    text-align: center;
+		    width: 12px;
+		    height: 12px;
+		}
+
+		/* Top right openable menu */
+
+		#top_nav {
+		    position: fixed;
+		    z-index: 2;
+		    right: 10px;
+		    top: 55px;
+		    background-color: white;
+		    margin: 0;
+		    padding: 0;
+		    box-shadow: 2px 2px 1px #828282,
+		                -2px 2px 1px #828282,
+		                2px 2px 1px #828282;
+		}
+
+		#top_nav:after {
+		    bottom: 100%;
+			left: 80%;
+			border: solid transparent;
+			content: " ";
+			position: absolute;
+			pointer-events: none;
+			border-bottom-color: #ffffff;
+			border-width: 8px;
+			margin-top: -8px;
+		}
+
+		#top_nav li {
+		    list-style: none;
+		    border-bottom: 2px solid #ededed;
+		}
+
+		#top_nav li a {
+		    display: inline-block;
+		    width: calc(100% - 20px);
+		    text-decoration: none;
+		    color: #47515a;
+		    padding: 10px;
+		    font-size: 1.2em;
+		}
+
+		#top_nav li a:hover {
+		    background-color: #ededed;
+		}
+
+		/* Appointments */
+
+		.appointment {
+		    margin-left: 10px;
+		    float: left;
+		    border: 1px solid #cccbd9;
+		    border-radius: 5px;
+		    width: 23%;
+		    min-width: 240px;
+		    text-align: center;
+		    margin-bottom: 10px;
+		    min-height: 280px;
+		}
+
+		.appointment h3 {
+		    font-size: 1.5em;
+		}
+
+		.appoint_time {
+		    background-color: #ffe8d8;
+		    border: 1px solid #ffe8d8;
+		    border-radius: 5px;
+		    width: 85%;
+		    margin: 0 auto;
+		    padding: 5px 0;
+		    color: #7a7a78;
+		    margin-bottom: 5px;
+		}
+
+		.appoint_time i {
+		    color: #896d3b;
+		}
+
+		.appoint_time span {
+		    color: #d9544f;
+		    font-size: 1.2em;
+		}
+
+		.appoint_time:hover {
+		    cursor: pointer;
+		}
+
+		.appoint_green {
+		    background-color: #d4eec9;
+		    color: #3c763c;
+		    border-color: #d4eec9;
+		}
+
+		.appoint_green i{
+		    color: #3c763c;
+		}
+
+		.appoint_selected_red {
+		    color: #d9544f;
+		    border-color: #d9544f;
+		}
+
+		.appoint_selected_red i{
+		    color: #d9544f;
+		}
+
+		.appoint_selected_green {
+		    border-color: #3C763C;
+		}
+
+		.add_appointment {
+		    border: 1px solid #cccbd9;
+		    border-radius: 5px;
+		    margin: 20px auto 10px auto;
+		    padding: 5px 0;
+		    width: 85%;
+		    color: #cccbd9;
+		}
+
+		.add_appointment:hover {
+		    cursor: pointer;
+		}
+
+    </style>
+</head>
+
+<body>
+    <div id="contentHolder">
+        <div class="appointment">
+            <h3>SUN 1 Nov 2015</h3>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>MON 2 Nov 2015</h3>
+            <div class="appoint_time" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_green" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>TUE 3 Nov 2015</h3>
+            <div class="appoint_time appoint_green" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment" >
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>WED 4 Nov 2015</h3>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>THU 5 Nov 2015</h3>
+            <div class="appoint_time" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>FRI 6 Nov 2015</h3>
+            <div class="appoint_time appoint_green appoint_selected_green" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_green" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="appointment">
+            <h3>SAT 7 Nov 2015</h3>
+            <div class="appoint_time" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_selected_red" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="appoint_time appoint_green" onclick="select_appointment(this)">
+                10:25 am - 10:45 am&nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-person"></i>&nbsp;&nbsp;Max Ward&nbsp;&nbsp;&nbsp;&nbsp;<span>$</span>
+            </div>
+            <div class="add_appointment">
+                <i class="ion-plus"></i>&nbsp;Appointment
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script>
+        function select_appointment(elem) {
+            if(elem.classList.contains("appoint_selected_green")) {
+                elem.classList.remove("appoint_selected_green");
+            } else if (elem.classList.contains("appoint_selected_red")) {
+                elem.classList.remove("appoint_selected_red");
+            } else if (elem.classList.contains("appoint_green")) {
+                elem.classList.add("appoint_selected_green");
+            } else {
+                elem.classList.add("appoint_selected_red");
+            }
+        }
+    </script>
+</body>
+
+</html>

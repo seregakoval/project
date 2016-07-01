@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page 01</title>
+    <link rel="stylesheet" href="css/basic_and_header.css">
+    <link rel="stylesheet" href="css/page01.css">
+    <link rel="stylesheet" href="css/ionicons.css">
+    
+    <!-- The next file is for the custom scrollbar -->
+    <script src="js/perfect-scrollbar.min.js"></script>
+
+
+        <script>
+                function changeframe(filename){
+                        frames['main_table_wrapper'].location.href = filename;
+                        //parent.document.itemform.custid.value = custid;
+                        //parent.document.getElementById('custname').innerHTML = custname;
+                }
+        </script>
+
+
+
+</head>
+
+<body>
+
+    <ul id="top_nav" style="display:none">
+        <li><a href="#"><i class="ion-person"></i>&nbsp;&nbsp;Profile</a></li>
+        <li><a href="#"><i class="ion-social-usd"></i>&nbsp;&nbsp;Sales</a></li>
+        <li><a href="#"><i class="ion-social-buffer"></i>&nbsp;&nbsp;Comission</a></li>
+        <li><a href="#"><i class="ion-log-out"></i>&nbsp;&nbsp;Logout</a></li>
+    </ul>
+    
+    <header>
+        <div id="top_left">
+            <div id="home">
+                <i class="icon ion-ios-home"></i>
+            </div>
+            <h1>Klientec IBeauty Manager 11</h1>
+        </div>
+
+        <div id="top_right">
+            <p id="greeting" class="arrow_box">
+                Hi, I'm <span>Christine</span>, from MV outlet
+            </p>
+            <img src="img/actress_small.jpg"/> 
+            <a href="#" onclick="show_hide_menu()"><i class="ion-arrow-down-b"></i></a>
+        </div>
+        
+        <div class="clear"></div>
+    </header>
+    
+    <div class="left_win">
+        
+        <div class="button1">
+            <i class="icon ion-person-add"></i>
+            <p>New Customer</p>
+        </div>
+        
+        <div class="button1" id="walk_in_sales_button">
+            <i class="icon ion-social-usd"></i>
+            <p>Walk In Sales</p>
+        </div>
+        <div class="clear"></div>
+        
+        <div class="panel_wrapper">
+        
+            <div id="search_container">
+                <div id="input_container">
+                    <input type="text" id="search_input" placeholder="Search...">
+                    <i class="icon ion-search"></i>
+                </div>
+                <div id="select_container">
+                    <div class="styled-select">
+                        <select>
+                          <option value="option1">IC NO</option>
+                          <option value="option2">Option 2</option>
+                          <option value="option3">Option 3</option>
+                          <option value="option4">Option 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        <!-- This iframe has custom scrollbar -->
+            <iframe src="page01_iframe_clients.html" 
+                    frameBorder="0" 
+                    id="client_wrapper" 
+                    width="100%" 
+                    scrolling="no">            
+            </iframe>
+        </div>        
+    </div>
+    
+    <div class="right_win">
+        <div class="top_client_menu">
+            <div class="green_menu_button"><i class="ion-navicon-round"></i></div>
+            <p>Tan Mei Mei</p>
+            <div class="clear"></div>
+        </div>
+        
+        <!-- This iframe has custom scrollbar -->
+        <iframe src="page01_iframe_main.html" 
+                frameBorder="0" 
+                id="main_table_wrapper"
+		name="main_table_wrapper" 
+                scrolling="no">
+        </iframe>
+        
+        <div id="nav_bar">
+            <a href="page11.html">
+                <div class="outer_wrap" title="New Sales">
+                    <div class="orange_circle"> 
+                        <i class="icon ion-social-usd"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="outer_wrap" title="Activity" onclick="changeframe('page01_iframe_main.html');">
+                <i class="icon ion-android-settings"></i>
+            </div>
+            <div class="outer_wrap" title="Profile" id="current"  onclick="changeframe('page01_iframe_main.html');">
+                <i class="icon ion-person"></i>
+            </div>
+            <!---a href="page02.html"--->
+                <div class="outer_wrap" title="Sales History"  onclick="changeframe('page02_iframe_main.html');">
+                    <i class="icon ion-android-cart"></i>
+                </div>
+            <!---/a---> 
+            <a href="page05_06.html">
+                <div class="outer_wrap" title="Payment"  onclick="changeframe('page05_06_iframe_outstanding_balance.html');">
+                    <i class="icon ion-cash"></i>
+                </div>
+            </a>  
+            <a href="page03_04.html">
+                <div class="outer_wrap" title="Collection"  onclick="changeframe('page03_04_iframe_collection_history.html');">
+                    <i class="icon ion-briefcase"></i>
+                </div>
+            </a>
+            <a href="page07.html">
+                <div class="outer_wrap" title="Maintainance"  onclick="changeframe('page07_iframe_first_table.html');">
+                    <i class="icon ion-wrench"></i>
+                </div>
+            </a> 
+            <a href="page09.html">
+                <div class="outer_wrap" title="Point">
+                    <i class="icon ion-heart"></i>
+                </div>
+            </a>
+            <a href="page08.html">
+                <div class="outer_wrap" title="Service">
+                    <i class="icon ion-happy-outline"></i>
+                </div>
+            </a>
+            <a href="page10.html">
+                <div class="outer_wrap" title="Service History">
+                    <i class="icon ion-document-text"></i>
+                </div>
+            </a>    
+        </div>        
+    </div>   
+    
+    <div class="clear"></div>
+    
+    <script src="js/show_menu.js"></script>
+    
+<!-- This script adds custom scrollbar to the iframe (actually to the inner content of the iframe) -->   
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+
+
+
+
+<table>
+	<tr>
+		<th>Level one code</th>
+		<th>Level one description</th>
+		<th>Level two code</th>
+		<th>Level two description</th>
+		<th>Level three code</th>
+		<th>Level three description</th>
+		<th>Level four code</th>
+		<th>Level four description</th>
+		<th>Item code</th>
+		<th>item name</th>
+	</tr>
+	 
+		<tr>
+			<td>+_+</td>
+			<td>'__'⌀</td>
+			<td>*__*</td>
+			<td>+__+</td>
+			<td>99</td>
+			<td>TEST 7777</td>
+			<td>00007</td>
+			<td>abc%u2300</td>
+			<td>01-CHEQE-05-0002</td>
+			<td>4.5MM X 4' X 8%u2300</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>+_+</td>
+			<td>'__'⌀</td>
+			<td>*__*</td>
+			<td>+__+</td>
+			<td>99</td>
+			<td>TEST 7777</td>
+			<td>00007</td>
+			<td>abc%u2300</td>
+			<td>q1q1</td>
+			<td>test � �</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>1</td>
+			<td>Steel Material</td>
+			<td>141414</td>
+			<td>Angle</td>
+			<td>A1</td>
+			<td>ASME Angle</td>
+			<td>AS2</td>
+			<td>Grade 2</td>
+			<td>123</td>
+			<td>ASME 12 x 12 x 12</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>1</td>
+			<td>Steel Material</td>
+			<td>141414</td>
+			<td>Angle</td>
+			<td>A1</td>
+			<td>ASME Angle</td>
+			<td>AS2</td>
+			<td>Grade 2</td>
+			<td>128</td>
+			<td>15 xz 15 x 15 ASTM Angle</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>1</td>
+			<td>Steel Material</td>
+			<td>141414</td>
+			<td>Angle</td>
+			<td>A1</td>
+			<td>ASME Angle</td>
+			<td>AS1</td>
+			<td>Grade A</td>
+			<td>880</td>
+			<td>123 Xz 15 X 15 ASTM Angle</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>1</td>
+			<td>Steel Material</td>
+			<td>141414</td>
+			<td>Angle</td>
+			<td>A1</td>
+			<td>ASME Angle</td>
+			<td>00008</td>
+			<td>TEST</td>
+			<td>aa</td>
+			<td>aa</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>001</td>
+			<td>Office Lots</td>
+			<td>IG</td>
+			<td>Item G</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>002</td>
+			<td>Shop Lots</td>
+			<td>IH</td>
+			<td>Item H</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>001</td>
+			<td>Office Lots</td>
+			<td>IJ</td>
+			<td>Item J</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>001</td>
+			<td>Office Lots</td>
+			<td>IK</td>
+			<td>Item K</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>002</td>
+			<td>Shop Lots</td>
+			<td>IL</td>
+			<td>Item L</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>BLDG</td>
+			<td>Building</td>
+			<td>002</td>
+			<td>Shop Lots</td>
+			<td>IM</td>
+			<td>Item M</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>002</td>
+			<td>Leased Hold Land</td>
+			<td>00007</td>
+			<td>ssgsgsgsgs</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>002</td>
+			<td>Leased Hold Land</td>
+			<td>00008</td>
+			<td>sgsgsgsg</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>001</td>
+			<td>FreeHold Land</td>
+			<td>IN</td>
+			<td>Item N</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>001</td>
+			<td>FreeHold Land</td>
+			<td>IO</td>
+			<td>Item O</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>002</td>
+			<td>Leased Hold Land</td>
+			<td>V1</td>
+			<td>Item Z</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>CA</td>
+			<td>Fixed Asset</td>
+			<td>ITM2</td>
+			<td>Land</td>
+			<td>002</td>
+			<td>Leased Hold Land</td>
+			<td>V2</td>
+			<td>Item V</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>34</td>
+			<td>Van</td>
+			<td>0</td>
+			<td>Item U</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>321</td>
+			<td>12313123</td>
+			<td>00003</td>
+			<td>5855Ø</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>321</td>
+			<td>12313123</td>
+			<td>00004</td>
+			<td>123 111Ø efss dfvdfg</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>90</td>
+			<td>Lorry</td>
+			<td>1</td>
+			<td>Item W</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>321</td>
+			<td>12313123</td>
+			<td>31232</td>
+			<td>111Ø efss dfvdfg</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>321</td>
+			<td>12313123</td>
+			<td>3213</td>
+			<td> 111Ø efss </td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>321</td>
+			<td>12313123</td>
+			<td>321312</td>
+			<td>231321111Ø efss dfvdfg</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>34</td>
+			<td>Van</td>
+			<td>IU</td>
+			<td>Item U</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>AP</td>
+			<td>Capital Expenditure⌀</td>
+			<td>FA</td>
+			<td>Current asset</td>
+			<td>798</td>
+			<td>Motor Vehicle</td>
+			<td>34</td>
+			<td>Van</td>
+			<td>TEST456</td>
+			<td>1 1/2"� x 3.7m Polish Shaft</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>123</td>
+			<td>Grade A</td>
+			<td>100-1</td>
+			<td>Item A</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>123</td>
+			<td>Grade A</td>
+			<td>101</td>
+			<td>Item B</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>123</td>
+			<td>Grade A</td>
+			<td>105</td>
+			<td>Item C</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>127</td>
+			<td>Grade B</td>
+			<td>200</td>
+			<td>Item D</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>127</td>
+			<td>Grade B</td>
+			<td>IE</td>
+			<td>Item E</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>CM</td>
+			<td>Civil Material</td>
+			<td>CM-01</td>
+			<td>Cables</td>
+			<td>100</td>
+			<td>High Tensile Cables</td>
+			<td>127</td>
+			<td>Grade B</td>
+			<td>IF</td>
+			<td>Item F</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>Code</td>
+			<td>11111111111</td>
+			<td>Code</td>
+			<td>11rrr</td>
+			<td>test</td>
+			<td>testdesc</td>
+			<td>00009</td>
+			<td>testing123</td>
+			<td>test</td>
+			<td>12345�</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>01-CHEQE-05-0001</td>
+			<td>4.5MM X 4' X 8'</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>123123</td>
+			<td>Angle 5' and 3' feet</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>123321</td>
+			<td>Angle 12" x 60"</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>i8798</td>
+			<td>Angle 15' and 3' feet</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>jhgj</td>
+			<td>123' c 3213'</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>00001</td>
+			<td>Structural Material</td>
+			<td>0012</td>
+			<td>Steel Material</td>
+			<td>32</td>
+			<td>ANgle</td>
+			<td>vbnbvn</td>
+			<td>nvbn ' x gfgdf'</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>jl</td>
+			<td>lj</td>
+			<td>123</td>
+			<td>123123</td>
+			<td>33</td>
+			<td>231233</td>
+			<td>00001</td>
+			<td>7hg</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>jl</td>
+			<td>lj</td>
+			<td>123</td>
+			<td>123123</td>
+			<td>33</td>
+			<td>231233</td>
+			<td>00002</td>
+			<td>5555</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>jl</td>
+			<td>lj</td>
+			<td>123</td>
+			<td>123123</td>
+			<td>00003</td>
+			<td>fefef</td>
+			<td>00005</td>
+			<td>5656565</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>jl</td>
+			<td>lj</td>
+			<td>123</td>
+			<td>123123</td>
+			<td>00003</td>
+			<td>fefef</td>
+			<td>00006</td>
+			<td>565656</td>			
+		</tr>
+	
+	 
+		<tr>
+			<td>lkklf</td>
+			<td>Civil Materials</td>
+			<td>jl</td>
+			<td>lj</td>
+			<td>123</td>
+			<td>123123</td>
+			<td>33</td>
+			<td>231233</td>
+			<td>qqqq666</td>
+			<td>yuyyy</td>			
+		</tr>
+	
+	
+
+</table>
+
+
