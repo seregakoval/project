@@ -1,0 +1,223 @@
+.clearfix:after {
+  content: '';
+  display: table;
+  height: 0;
+  clear: both; }
+
+.clearfix:before {
+  content: '';
+  display: table;
+  height: 0;
+  clear: both; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Verdana; }
+
+.top-header {
+  background-color: #e8e8e8;
+  -webkit-box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.4);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  padding: 10px 0;
+  height: 83px; }
+  .top-header .wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto; }
+    .top-header .wrapper .left {
+      float: left; }
+      .top-header .wrapper .left .logo-img {
+        float: left; }
+        .top-header .wrapper .left .logo-img img {
+          width: 88px;
+          height: 82px;
+          margin-right: 10px; }
+      .top-header .wrapper .left .logo-text {
+        float: left;
+        font-size: 20px;
+        color: #333;
+        line-height: 25px; }
+    .top-header .wrapper .right {
+      margin-top: 10px;
+      float: right; }
+      .top-header .wrapper .right p {
+        font-size: 23px;
+        color: #333;
+        margin-top: 5px; }
+
+.form {
+  background: url("../img/bg-form.jpg") no-repeat 0 0;
+  background-size: cover;
+  padding: 15px 0 80px 0; }
+  .form .wrapper {
+    max-width: 1200px;
+    margin: 0 auto; }
+    .form .wrapper .title {
+      color: #fff;
+      font-family: Candara;
+      font-size: 47px;
+      font-weight: bold;
+      line-height: 56px;
+      text-align: center; }
+    .form .wrapper .sub-title {
+      font-size: 47px;
+      font-family: Candara;
+      color: #fff;
+      margin-top: 15px;
+      text-align: center; }
+    .form .wrapper .block-form {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      max-width: 490px;
+      margin: 60px auto 0 auto;
+      padding-top: 20px;
+      background: rgba(255, 255, 255, 0.5); }
+      .form .wrapper .block-form input[type='text'] {
+        height: 50px;
+        font-size: 40px;
+        color: #5e5e5e;
+        font-family: Candara;
+        max-width: 376px;
+        margin: 0 auto;
+        display: block;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        margin-bottom: 30px;
+        padding: 0 10px 0 30px; }
+      .form .wrapper .block-form input::-webkit-input-placeholder {
+        opacity: 1;
+        color: #5e5e5e; }
+      .form .wrapper .block-form input::-moz-placeholder {
+        opacity: 1;
+        color: #5e5e5e; }
+    .form .wrapper input[type='submit'] {
+      font-size: 39px;
+      text-transform: uppercase;
+      color: #5e5e5e;
+      text-align: center;
+      width: 100%;
+      background: #f0f0f0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 0;
+      border-radius: 0 0 8px 8px;
+      margin-top: 50px; }
+
+.tovar .wrapper {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .tovar .wrapper .post {
+    margin-top: 100px; }
+    .tovar .wrapper .post .title {
+      font-size: 30px;
+      text-align: center;
+      color: #000;
+      font-weight: bold;
+      font-family: Verdana; }
+    .tovar .wrapper .post .content {
+      padding-top: 30px; }
+      .tovar .wrapper .post .content .img {
+        margin-top: 15px;
+        float: left;
+        width: 40%; }
+      .tovar .wrapper .post .content .text {
+        width: 60%;
+        float: right; }
+        .tovar .wrapper .post .content .text p {
+          float: left;
+          font-family: Verdana;
+          color: #000;
+          line-height: 31px;
+          font-size: 22px; }
+    .tovar .wrapper .post .buttons .col-lg-4 {
+      width: 40.3%;
+      float: left; }
+      .tovar .wrapper .post .buttons .col-lg-4 .button {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        float: left;
+        padding: 15px 70px;
+        background: #e8e8e8;
+        font-size: 20px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin-top: 15px;
+        text-transform: uppercase; }
+      .tovar .wrapper .post .buttons .col-lg-4 p {
+        font-family: Verdana, Arial;
+        font-size: 26px;
+        text-align: center;
+        color: #000; }
+      .tovar .wrapper .post .buttons .col-lg-4 p.price {
+        margin-top: 20; }
+    .tovar .wrapper .post .buttons .like {
+      float: right; }
+      .tovar .wrapper .post .buttons .like span {
+        display: block;
+        float: left;
+        font-size: 23px;
+        margin: 18px 10px 0 0; }
+        .tovar .wrapper .post .buttons .like span img {
+          display: block;
+          float: left; }
+
+/*# sourceMappingURL=style.css.map */
