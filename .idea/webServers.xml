@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b515c41e-e8ab-4b9f-82e7-a556da53033f" name="koval" url="http://kvmde04-6532.fornex.org">
+        <fileTransfer host="kvmde04-6532.fornex.org" port="21" password="dfd2dfd2dfd2dfd2" username="koval">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="8776c631-95c7-4c98-8094-47465755cd63" name="new" url="http://appart02.ftp.ukraine.com.ua">
+        <fileTransfer host="appart02.ftp.ukraine.com.ua" port="21" username="appart02_sitemanage">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="4511624c-e7e0-46b6-af48-64be729ce407" name="zacupi" url="http://94.242.60.2">
+        <fileTransfer host="94.242.60.2" port="21" username="zakupi_verts_01">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="fb9e6638-8721-43a7-843b-dd6aa1bfd629" name="cpanel3" url="http://50.87.144.161">
+        <fileTransfer host="50.87.144.161" port="21" password="dff5dfcddfffdfd2dfefdfd8df93df8bdfdedfdedfe2dfdfdfefdfc7dffddf93dfdf" username="andywhit">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
