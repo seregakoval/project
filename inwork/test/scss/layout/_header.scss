@@ -1,0 +1,159 @@
+/*----HEADER----*/
+
+.header{
+  height: 72px;
+  .container-fluid{
+    height: 100%;
+    display: flex;
+    > div{
+      align-self: center;
+      .logo{
+        float: left;
+        margin-left: 10px;
+      }
+      .social-block{
+        li{
+          float:left;
+          a{
+            display: block;
+            width: 26px;
+            height: 26px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin:0 4px;
+          }
+          .linredin{
+            background: #0177b5 url("../images/icons/LinkedIn-icon.png") no-repeat center center;
+          }
+          .facebook{
+            background:  url("../images/icons/Facebook-icon.png") no-repeat center center;
+          }
+          .twitter{
+            background:  url("../images/icons/twitter-icon.png") no-repeat center center;
+          }
+        }
+      }
+      .search{
+        max-width: 290px;
+        position: relative;
+        margin-left: 8px;
+        input{
+          font-size: 14px;
+          color: #c9cdd0;
+          -webkit-border-radius: 3px;
+          outline: none;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          border: 1px solid #8cd8cb;
+          width: 100%;
+          padding: 5px 15px;
+          font-weight: 600;
+        }
+        input::-webkit-input-placeholder{
+          color: #c9cdd0;
+        }
+        input:-moz-placeholder{
+          color: #c9cdd0;
+        }
+        .icon-search{
+          width: 25px;
+          height: 25px;
+          right: 8px;
+          top: 2px;
+          position: absolute;
+          background: url("../images/icons/icon-search.png") no-repeat center center;
+        }
+      }
+      .navigation{
+        float: right;
+        margin: 19px 50px 0 0;
+          ul{
+            li{
+              float: left;
+              a{
+                display: block;
+                font-size: 16px;
+                color: #4e5e6a;
+                font-weight: 600;
+                text-decoration: none;
+                margin-right: 30px;
+              }
+              &:last-child a{margin-right: 0;}
+            }
+          }
+      }
+      .panel{
+        float: right;
+        margin-right: 56px;
+        .panel-info{
+          margin-top:15px;
+          float: left;
+          .select-list{
+            margin-right: 18px;
+            outline: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #22baa0;
+            float: left;
+            position: relative;
+          }
+          .panel-icons{
+            float: left;
+            li{
+              float: left;
+              a{
+                margin-right: 18px;
+                display: block;
+              }
+              .notice{
+                width: 23px;
+                height: 22px;
+                background: url("../images/icons/notice-icon.png") no-repeat center center;
+              }
+              .notice-message{
+                width: 25px;
+                position: relative;
+                height: 20px;
+                background: url("../images/icons/message-icon.png") no-repeat center center;
+                .number{
+                  position: absolute;
+                  right: -5px;
+                  font-size: 10px;
+                  padding-top: 1px;
+                  color: #fff;
+                  top: -5px;
+                  background: #22baa0;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+                  width: 12px;
+                  height: 12px;
+                  text-align: center;
+                }
+              }
+              &:last-child a{
+                margin-right : 0;
+              }
+            }
+          }
+        }
+        .panel-profile{
+          margin-left: 15px;
+          float: left;
+          .avatar{
+            float: left;
+            img{
+              width:47px;
+              height: 49px;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
